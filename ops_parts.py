@@ -3,7 +3,7 @@ import os
 import errno
 
 
-def run_elm_make(root_folder, *args, elm_path=''):
+def run_elm_make(root_folder, elm_path='', *args):
     from subprocess import call
     os.chdir(root_folder)
 
