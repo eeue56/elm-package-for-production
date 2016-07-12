@@ -1,0 +1,25 @@
+{
+    "version": "1.0.0",
+    "summary": "Example stuff",
+    "repository": "https://github.com/eeue56/blah.git",
+    "license": "All Rights Reserved",
+    "exposed-modules": [],
+    "native-modules": true,
+    "elm-version": "0.17.0 <= v < 0.18.0",
+    "source-directories": [
+        "src"
+    ],
+    "output-dir" : "build",
+    "entry-points" : {
+        "src/Main.elm" : "main.js"
+    },
+    "dependencies": {
+        "elm-lang/core": "4.0.1 <= v <= 4.0.1",
+        "elm-lang/html" : "1.0.0 <= v <= 1.0.0"
+    },
+    "test-directory" : "test",
+    "test-file" : "test/Test.elm",
+    "test-deps" : {
+        "elm-community/elm-test": "1.1.0 <= v <= 1.1.0"
+    }
+}
