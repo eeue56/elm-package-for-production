@@ -3,8 +3,6 @@ from __future__ import print_function
 
 import sys
 import json
-import requests
-import struct
 import argparse
 import elm_package
 
