@@ -18,9 +18,12 @@ def load_package_from_file(path):
 def main():
 
     parser = argparse.ArgumentParser(description='Elm package, but for production code.')
+    #parser.add_argument('--elm-location', help='specify the location of elm, e.g node_modules/.bin', default='')
+
     parser.add_argument('--package-file', help='specify a package file to use', default='prod_elm_package.json')
     parser.add_argument('--tests', help='compile the tests', action='store_true', default=False)
     parser.add_argument('--app', help='compile the app', action='store_true', default=False)
+
 
 
     args = parser.parse_args()

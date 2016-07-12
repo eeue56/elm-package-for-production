@@ -21,5 +21,6 @@
     "test-file" : "test/Test.elm",
     "test-deps" : {
         "elm-community/elm-test": "1.1.0 <= v <= 1.1.0"
-    }
+    },
+    "elm-path" : ""
 }

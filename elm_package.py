@@ -16,10 +16,11 @@ class Package(object):
         self.source_directories = package_json["source-directories"]
         self.dependencies = package_json['dependencies']
         self.repository = package_json['repository']
+        self.elm_path = package_json['elm-path']
 
     def install(self, **kwargs):
         self.write_elm_package_file()
-        ops_parts.run_elm_make('.')
+        ops_parts.run_elm_make('.', elm_path=self.elm_path)
         self.clean()
 
     def clean(self):
