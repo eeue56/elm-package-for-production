@@ -65,7 +65,7 @@ class ProductionAppPackage(Package):
 
         for entry_point in self.entry_points:
             out_file = self.output_dir + '/' + self.entry_points[entry_point]
-            ops_parts.run_elm_make('.', entry_point, '--output', out_file)
+            ops_parts.run_elm_make('.', self.elm_path, entry_point, '--output', out_file)
 
         Package.clean(self)
 
@@ -82,7 +82,7 @@ class ProductionTestPackage(Package):
         Package.compile(self)
         Package.write_elm_package_file(self)
 
-        ops_parts.run_elm_make('.', self.entry_point, '--output', '_elm_tests.js')
+        ops_parts.run_elm_make('.', self.elm_path, self.entry_point, '--output', '_elm_tests.js')
 
         Package.clean(self)
 
